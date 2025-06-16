@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "builds": [
+    {
+      "src": "laboratorio05/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "50mb" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "laboratorio05/wsgi.py" }
+  ]
+}
